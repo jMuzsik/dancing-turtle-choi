@@ -37,11 +37,29 @@ Use at least sequelize, express, react, and redux when creating this app. You ca
 
 - Navigation: as a user I...
   * will land on **Home** by default
+
+    initial website is home. That is what is automatically redirected to when website is reached
+
   * can navigate to **Campuses** from **Home**
+
+    There is a box containing Campuses, all in there own clickable box
+
   * can navigate to **Students** from **Home**
+
+    There is a box that will open a new box with all student names
+
   * can navigate to view a **Single Campus** from **Campuses**
+
+    There is a box that opens when the campus is selected
+
   * can navigate to view a **Single Student** from **Students**
+
+    W/in each student you can click the individual student to view a box of info about them
+
   * can navigate to view a **Single Student** from **Single Campus** (for any student at that campus)
+
+
+
   * can navigate to view that student's **Single Campus** from **Single Student**
 
 - Views: as a user I...
@@ -88,7 +106,7 @@ DELETE
 
 ### How to test functionality without a frontend
 - GET: use your browser
-- POST / PUT / DELETE : 
+- POST / PUT / DELETE :
  - CLI (command line interface) with `curl`
    - e.g. `curl -H "Content-Type: application/json" -X POST -d '{"username":"kate","password":"1234"}' http://localhost:3000/api/login`
    - `-H`: headers. `-X`: verb. `-d`: data (must be of the type specified in headers). http://[address]:[port]/[route_path]
