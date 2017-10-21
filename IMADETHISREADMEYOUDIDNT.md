@@ -2,6 +2,6 @@ If reading through code, start at beginning of components, there are repeated co
 
 :?:)
 
-There is a seed file, run node app/seed.js
+There is a seed file, run node app/seed.js and go to local host 1337. Have the sound on and watch for the minute and a half
 
-Sadly, some images are not working from the seed file. Very tragic
+Images are students w/in cohort, the dramatic opening is the main focus in this case.
