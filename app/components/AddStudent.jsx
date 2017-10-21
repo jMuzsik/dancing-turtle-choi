@@ -10,7 +10,6 @@ class AddStudent extends Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
   handleSubmit(event) {
     event.preventDefault();
     //cruelty of option values only being strings

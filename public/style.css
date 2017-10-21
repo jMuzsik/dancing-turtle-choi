@@ -173,24 +173,25 @@ table {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 3em;
+  padding: .5em;
 }
 
 .dance {
   z-index: 1000;
-  animation-duration: 60s;
+  animation-duration: 95s;
   animation-name: spin;
   animation-iteration-count: infinite;
 }
 @keyframes spin {
   from {
     transform: rotate(0deg);
-    width: 0.5vw;
-    height: 0.5vw;
+    width: 0.2vw;
+    height: 0.2vw;
   }
   to {
     transform: rotate(360deg);
-    width: 12vw;
+    float:left;
+    width:12vw;
     height: 12vh;
   }
 }
@@ -245,9 +246,9 @@ table {
 }
 .starwars {
   position:fixed;
-  z-index: 1000;
+  z-index: 10000;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear;
+  animation: crawl 89s linear;
   animation-iteration-count: infinite;
 }
 

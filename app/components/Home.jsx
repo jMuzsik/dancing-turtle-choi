@@ -12,6 +12,15 @@ class Home extends Component {
     this.createImageAnimations = this.createImageAnimations.bind(this);
   }
 
+  componentDidMount() {
+    setTimeout(
+      function() {
+        this.setState({ isVisible: true });
+      }.bind(this),
+      8000
+    );
+  }
+
   grabStudentImages(students) {
     const imageElements = students.map(student => {
       return this.createImageAnimations(student);
@@ -20,7 +29,14 @@ class Home extends Component {
   }
 
   createImageAnimations(student) {
-    return <img key={student.id} className="dance" src={student.image} />;
+    return (
+      <img
+        className="studentimages"
+        key={student.id}
+        className="dance"
+        src={student.image}
+      />
+    );
   }
 
   createCrawlText(students, campuses) {
@@ -32,31 +48,32 @@ class Home extends Component {
           style={{
             fontSize: "1em",
             position: "relative",
-            color: "yellow",
+            color: "rgb(253,209,48)",
             left: "30vw",
             transform: "skew(50deg)"
           }}
         >
-          {campus.name}<br />
+          {campus.name}
+          <br />
         </h1>
       );
     });
 
     const studentTexts = students.map(student => {
       return (
-
         <div
           key={student.name}
           style={{
             fontSize: ".6em",
             position: "relative",
-            color: "yellow",
+            color: "rgb(253,209,48)",
             left: "30vw",
             transform: "skew(50deg)",
-            textAlign: 'center'
+            textAlign: "center"
           }}
         >
-          {student.name}<br />
+          {student.name}
+          <br />
         </div>
       );
     });
@@ -64,16 +81,17 @@ class Home extends Component {
   }
 
   render() {
-
+    console.log(this.state.isVisible)
     const isMounted = this.props.students.length > 0;
     //images will get image elements, text will be text elements
     let students = this.props.students,
-     campuses = this.props.campuses,
-     images = [],
-     imagesOne = [],
-     imagesTwo = [],
-     imagesThree = [],
-     text = [];
+      campuses = this.props.campuses,
+      images = [],
+      imagesOne = [],
+      imagesTwo = [],
+      imagesThree = [],
+      imagesFour = [],
+      text = [];
     if (isMounted) {
       //grab all images
       images = this.grabStudentImages(this.props.students);
@@ -81,10 +99,11 @@ class Home extends Component {
       text = this.createCrawlText(students, campuses);
       let i = 0;
       //b/c i do not understand css all that well, I had to make individual containers that contained a max of four images
-      while (imagesOne.length < 4) {
+      while (imagesOne.length < 11) {
         imagesOne[i] = images.pop();
         imagesTwo[i] = images.pop();
         imagesThree[i] = images.pop();
+        imagesFour[i] = images.pop();
         i++;
       }
     }
@@ -112,24 +131,25 @@ class Home extends Component {
           autoPlay
           loop
         />
-        <h1
-          className="starwars"
-          style={{
-            fontSize: "4em",
-            position: "fixed",
-            color: "yellow",
-            left: "30vw",
-            transform: "skew(50deg)"
-          }}
-        >
-          <div>
-          {text}
-          </div>
-        </h1>
-      {/*some reason couldn't get it to work w/ one isMounted*/}
+        {this.state.isVisible && (
+          <h1
+            className="starwars"
+            style={{
+              fontSize: "4em",
+              position: "fixed",
+              color: "yellow",
+              left: "30vw",
+              transform: "skew(50deg)"
+            }}
+          >
+            <div>{text}</div>
+          </h1>
+        )}
+        {/*some reason couldn't get it to work w/ one isMounted*/}
         {isMounted && <div className="container">{imagesOne}</div>}
         {isMounted && <div className="container">{imagesTwo}</div>}
         {isMounted && <div className="container">{imagesThree}</div>}
+        {isMounted && <div className="container">{imagesFour}</div>}
       </div>
     );
   }

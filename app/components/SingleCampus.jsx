@@ -86,11 +86,10 @@ class SingleCampus extends Component {
         style={{
           color: "white",
           backgroundColor: "black",
-          background: `url(${campus.image}) no-repeat`,
-          backgroundSize: "100vw 100vh",
+          background: `url(${campus.image}) repeat`,
           zIndex: "-1",
           width: "100vw",
-          height: "100vh"
+          height: "100%"
         }}
       >
         {campusesMounted && (
