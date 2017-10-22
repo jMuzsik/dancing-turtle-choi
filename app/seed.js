@@ -1,5 +1,8 @@
 var {db, Students, Campuses} = require('../db/models')
 
+
+//seems these images expired
+
 // const animalArr = [
 //   {
 //     id: 10,

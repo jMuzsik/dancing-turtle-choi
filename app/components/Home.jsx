@@ -17,7 +17,7 @@ class Home extends Component {
       function() {
         this.setState({ isVisible: true });
       }.bind(this),
-      8000
+      8500
     );
   }
 
@@ -132,6 +132,7 @@ class Home extends Component {
           loop
         />
         {this.state.isVisible && (
+          <div>
           <h1
             className="starwars"
             style={{
@@ -144,12 +145,12 @@ class Home extends Component {
           >
             <div>{text}</div>
           </h1>
+          <div className="container">{imagesOne}</div>
+          <div className="container">{imagesTwo}</div>
+          <div className="container">{imagesThree}</div>
+          <div className="container">{imagesFour}</div>
+          </div>
         )}
-        {/*some reason couldn't get it to work w/ one isMounted*/}
-        {isMounted && <div className="container">{imagesOne}</div>}
-        {isMounted && <div className="container">{imagesTwo}</div>}
-        {isMounted && <div className="container">{imagesThree}</div>}
-        {isMounted && <div className="container">{imagesFour}</div>}
       </div>
     );
   }
