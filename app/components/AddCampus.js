@@ -17,7 +17,7 @@ class AddCampus extends Component {
     //i check image length here so a submit still works w/out image
     if (validImage(image) || image.length === 0) {
       const campuses = this.props.campuses;
-      //1,2,3,4 next object will be 5 -- never 2, 3,4,5 next is 6, next object would be 1
+      //1,2,3,4 next object will have id of 5 -- never 2,3,4,5 next is 6, next object will have id of 1
       const id = keepIdsInOrder(campuses);
       if (image.length === 0) {
         //default image

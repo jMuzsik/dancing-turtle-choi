@@ -129,6 +129,8 @@ table {
   border-spacing: 0;
 }
 
+/*copied from pure styling site*/
+
 .button-success,
 .button-error,
 .button-warning,
@@ -170,6 +172,7 @@ table {
 .container > img {
   position: relative;
   display: inline-block;
+  text-align: center;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
@@ -221,7 +224,7 @@ table {
     height: .9vh;
   }
   35% {
-    transform: rotate(2400deg);
+    transform: rotate(24000deg);
     width: 1.1vw;
     height: 1.1vw;
   }
@@ -347,6 +350,8 @@ table {
   animation: crawl 88s linear;
   animation-iteration-count: infinite;
 }
+
+/*quite literally copied from a css learning website for star wars crawl but I had to make it my own as the persons code demanded the entire screens box but that would not fit my code*/
 
 .crawl {
   /* Position the element so we can adjust the top property in the animation */

@@ -4,52 +4,48 @@ const GET_STUDENTS = "GET_STUDENTS";
 const POST_STUDENT = "POST_STUDENT";
 const DELETE_STUDENT = "DELETE_STUDENT";
 const DELETE_STUDENTS = "DELETE_STUDENTS";
-const PUT = "PUT_STUDENT";
+const PUT_STUDENT = "PUT_STUDENT";
 
-function getStudents(students) {
-  return {
-    type: GET_STUDENTS,
-    students
-  };
-}
+const getStudents = students => ({
+  type: GET_STUDENTS,
+  students
+});
 
-const put = student => ({ type: PUT, student });
+const putStudent = student => ({
+  type: PUT_STUDENT,
+  student
+});
 
-function postStudent(student) {
-  return {
-    type: POST_STUDENT,
-    student
-  };
-}
+const postStudent = student => ({
+  type: POST_STUDENT,
+  student
+});
 
-function deleteStudent(student) {
-  return {
-    type: DELETE_STUDENT,
-    student
-  };
-}
+const deleteStudent = student => ({
+  type: DELETE_STUDENT,
+  student
+});
 
-function deleteStudents(campusId) {
-  return {
-    type: DELETE_STUDENTS,
-    campusId
-  };
-}
+const deleteStudents = campusId => ({
+  type: DELETE_STUDENTS,
+  campusId
+});
 
-export function fetchStudents() {
-  return function(dispatch) {
+export const fetchStudents = () => {
+  return dispatch => {
     return axios
       .get("/api/students")
       .then(res => res.data)
       .then(students => {
         const action = getStudents(students);
         dispatch(action);
-      });
+      })
+      .catch(console.error);
   };
-}
+};
 
-export function postStudentThunk(student, history) {
-  return function(dispatch) {
+export const postStudentThunk = (student, history) => {
+  return dispatch => {
     return axios
       .post("/api/students", student)
       .then(res => {
@@ -60,12 +56,12 @@ export function postStudentThunk(student, history) {
         dispatch(action);
         history.push(`/students/${newStudent.id}`);
       })
-      .catch(console.log);
+      .catch(console.error);
   };
-}
+};
 
-export function deleteStudentThunk(studentId, history) {
-  return function(dispatch) {
+export const deleteStudentThunk = studentId => {
+  return dispatch => {
     return axios
       .delete(`/api/students/${studentId}`)
       .then(student => {
@@ -75,34 +71,33 @@ export function deleteStudentThunk(studentId, history) {
       })
       .catch(console.error);
   };
-}
+};
 
-export function deleteStudentsThunk(campusId) {
-  return function(dispatch) {
+export const deleteStudentsThunk = campusId => {
+  return dispatch => {
     const action = deleteStudents(+campusId);
     dispatch(action);
   };
-}
+};
 
-export function putStudentThunk(student, history) {
-  return function(dispatch) {
+export const putStudentThunk = student => {
+  return dispatch => {
     return axios
       .put(`/api/students/${student.id}`, student)
       .then(res => {
         return res.data;
       })
       .then(newStudent => {
-        const action = put(newStudent);
-        console.log(action);
+        const action = putStudent(newStudent);
         dispatch(action);
       })
-      .catch(console.log);
+      .catch(console.error);
   };
-}
+};
 
-const studentsReducer = function(students = [], action) {
+const studentsReducer = (students = [], action) => {
   switch (action.type) {
-    case PUT:
+    case PUT_STUDENT:
       const otherStudents = students.filter(
         student => student.id !== action.student.id
       );

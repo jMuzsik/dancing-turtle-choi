@@ -105,10 +105,6 @@ var {db, Students, Campuses} = require('../db/models')
 //   }
 // ]
 
-
-
-
-
 const fullstackPeople = [
   {
     id: 1,
@@ -466,18 +462,18 @@ const fullstackPeople = [
 const placesArr = [
   {
     id: 1,
-    name: "Magical Coding Place",
+    name: "Best Cohort Ever",
     image: "http://aasnova.org/wp-content/uploads/2015/10/fig19.jpg",
     createdAt: "2017-10-19T14:25:20.558Z",
     updatedAt: "2017-10-20T01:07:30.615Z"
-  },
-  {
-    id: 2,
-    name: "Land of Kitty Cat",
-    image: "http://www.readersdigest.ca/wp-content/uploads/2011/01/4-ways-cheer-up-depressed-cat.jpg",
-    createdAt: "2017-10-19T16:13:31.246Z",
-    updatedAt: "2017-10-20T00:35:02.925Z"
   }
+  // {
+  //   id: 2,
+  //   name: "Land of Kitty Cat",
+  //   image: "http://www.readersdigest.ca/wp-content/uploads/2011/01/4-ways-cheer-up-depressed-cat.jpg",
+  //   createdAt: "2017-10-19T16:13:31.246Z",
+  //   updatedAt: "2017-10-20T00:35:02.925Z"
+  // }
 ]
 
 

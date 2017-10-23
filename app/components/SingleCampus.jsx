@@ -26,7 +26,7 @@ class SingleCampus extends Component {
   }
 
   findCampusStudents(campusId) {
-    //grab campuses associated
+    //grab students associated
     const students = this.props.students.filter(student => {
       return student.campusId === campusId;
     });
@@ -40,7 +40,7 @@ class SingleCampus extends Component {
           key={student.id}
           style={{
             display: "inline-block",
-            paddingLeft: "3em",
+            paddingLeft: "2em",
             paddingBottom: "2em"
           }}
         >
@@ -71,12 +71,12 @@ class SingleCampus extends Component {
     let campusesMounted = this.props.campuses.length > 0;
     //individual campus, associated students, divs for said students
     let campus = {},
-     studentsAssociated = [],
-     studentDivs = [];
+      studentsAssociated = [],
+      studentDivs = [];
 
     if (campusesMounted) {
       const campuses = this.props.campuses,
-       campusId = Number(this.props.match.params.campusid);
+        campusId = Number(this.props.match.params.campusid);
       campus = grabCampus(campuses, campusId);
       studentsAssociated = this.findCampusStudents(campus.id);
       studentDivs = this.createStudentDivs(studentsAssociated, campus);
@@ -95,7 +95,13 @@ class SingleCampus extends Component {
         {campusesMounted && (
           <div>
             <h1
-              style={{ marginTop: "0", textAlign: "center", fontSize: "3em" }}
+              style={{
+                margin: "0",
+                textAlign: "center",
+                fontSize: "3em",
+                paddingTop: "1em",
+                paddingBottom: "1em"
+              }}
             >
               {campus.name}
             </h1>

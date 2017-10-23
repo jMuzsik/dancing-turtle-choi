@@ -81,7 +81,7 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.state.isVisible)
+    console.log(this.state.isVisible);
     const isMounted = this.props.students.length > 0;
     //images will get image elements, text will be text elements
     let students = this.props.students,
@@ -133,22 +133,22 @@ class Home extends Component {
         />
         {this.state.isVisible && (
           <div>
-          <h1
-            className="starwars"
-            style={{
-              fontSize: "4em",
-              position: "fixed",
-              color: "yellow",
-              left: "30vw",
-              transform: "skew(50deg)"
-            }}
-          >
-            <div>{text}</div>
-          </h1>
-          <div className="container">{imagesOne}</div>
-          <div className="container">{imagesTwo}</div>
-          <div className="container">{imagesThree}</div>
-          <div className="container">{imagesFour}</div>
+            <h1
+              className="starwars"
+              style={{
+                fontSize: "4em",
+                position: "fixed",
+                color: "yellow",
+                left: "30vw",
+                transform: "skew(50deg)"
+              }}
+            >
+              <div>{text}</div>
+            </h1>
+            <div className="container">{imagesOne}</div>
+            <div className="container">{imagesTwo}</div>
+            <div className="container">{imagesThree}</div>
+            <div className="container">{imagesFour}</div>
           </div>
         )}
       </div>

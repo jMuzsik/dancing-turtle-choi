@@ -30,7 +30,7 @@ class SingleStudent extends Component {
     return (
       <div
         style={{
-          color: "white",
+          color: "black",
           background: `url(${student.image}) no-repeat`,
           backgroundSize: "100vw 100vh",
           zIndex: "-1",

@@ -46,7 +46,7 @@ class Campuses extends Component {
   }
 
   render() {
-    //background starsss
+    //background stars
     return (
       <div
         style={{
@@ -54,7 +54,7 @@ class Campuses extends Component {
             "url(https://michaelspanofoundation.org/wp-content/uploads/2014/10/empty-spaces.jpg)repeat",
           backgroundSize: "cover",
           zIndex: "-1",
-          height: "100%",
+          height: "100vh",
           backgroundColor: "black"
         }}
       >
@@ -72,11 +72,11 @@ class Campuses extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   campuses: state.campuses
 });
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  deleteCampus: (campus) => {
+  deleteCampus: campus => {
     return dispatch(deleteCampusThunk(campus));
   },
   deleteStudents: campusId => {

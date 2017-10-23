@@ -5,46 +5,40 @@ const POST_CAMPUS = "POST_CAMPUS";
 const DELETE_CAMPUS = "DELETE_CAMPUS";
 const PUT_CAMPUS = "PUT_CAMPUS";
 
-function getCampuses(campuses) {
-  return {
-    type: GET_CAMPUSES,
-    campuses
-  };
-}
+const getCampuses = campuses => ({
+  type: GET_CAMPUSES,
+  campuses
+});
 
-function postCampus(campus) {
-  return {
-    type: POST_CAMPUS,
-    campus
-  };
-}
+const postCampus = campus => ({
+  type: POST_CAMPUS,
+  campus
+});
 
-function putCampus(campus) {
-  return {
-    type: PUT_CAMPUS,
-    campus
-  };
-}
+const putCampus = campus => ({
+  type: PUT_CAMPUS,
+  campus
+});
 
-function deleteCampus(campus) {
-  return {
-    type: DELETE_CAMPUS,
-    campus
-  };
-}
-export function fetchCampuses() {
-  return function(dispatch) {
+const deleteCampus = campus => ({
+  type: DELETE_CAMPUS,
+  campus
+});
+
+export const fetchCampuses = () => {
+  return dispatch => {
     return axios
       .get("/api/campuses")
       .then(res => res.data)
       .then(campuses => {
         const action = getCampuses(campuses);
         dispatch(action);
-      });
+      })
+      .catch(console.error);
   };
-}
-export function postCampusThunk(newCampus, history) {
-  return function(dispatch) {
+};
+export const postCampusThunk = (newCampus, history) => {
+  return dispatch => {
     return axios
       .post("/api/campuses", newCampus)
       .then(res => {
@@ -54,12 +48,13 @@ export function postCampusThunk(newCampus, history) {
         const action = postCampus(newCampus);
         dispatch(action);
         history.push(`/campuses/${newCampus.id}`);
-      });
+      })
+      .catch(console.error);
   };
-}
+};
 
-export function putCampusThunk(campus, history) {
-  return function(dispatch) {
+export const putCampusThunk = campus => {
+  return dispatch => {
     return axios
       .put(`/api/campuses/${campus.id}`, campus)
       .then(res => {
@@ -67,23 +62,21 @@ export function putCampusThunk(campus, history) {
       })
       .then(newCampus => {
         const action = putCampus(newCampus);
-        console.log(action);
         dispatch(action);
       })
-      .catch(console.log);
+      .catch(console.error);
   };
-}
+};
 
-export function deleteCampusThunk(campusId, history) {
-  return function(dispatch) {
+export const deleteCampusThunk = campusId => {
+  return dispatch => {
     return axios.delete(`/api/campuses/${campusId}`).then(campus => {
       campus.id = +campusId;
       const action = deleteCampus(campus);
       dispatch(action);
-      history.push("/campuses");
     });
   };
-}
+};
 
 const campusesReducer = function(campuses = [], action) {
   switch (action.type) {
