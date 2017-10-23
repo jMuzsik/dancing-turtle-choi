@@ -21,7 +21,7 @@ class SingleCampus extends Component {
     student.campusId = null;
     student.id = id;
     if (deleteUser) {
-      this.props.putStudent(student, this.props.ownProps.history);
+      this.props.putStudent(student);
     }
   }
 
@@ -36,25 +36,13 @@ class SingleCampus extends Component {
   createStudentDivs(students, campus) {
     return students.map(student => {
       return (
-        <div
-          key={student.id}
-          style={{
-            display: "inline-block",
-            paddingLeft: "2em",
-            paddingBottom: "2em"
-          }}
-        >
+        <div key={student.id}>
           <NavLink key={student.id} to={`/students/${student.id}`}>
-            <button
-              style={{ backgroundColor: "black", color: "rgb(244, 209, 66)" }}
-              id={student.id}
-              className="button-success pure-button"
-            >
+            <button id={student.id} className="button-success pure-button">
               {student.name}
             </button>
           </NavLink>
           <input
-            style={{ backgroundColor: "black", color: "rgb(239, 23, 23)" }}
             onClick={this.handleRemoval}
             id={student.id}
             type="submit"
@@ -83,29 +71,15 @@ class SingleCampus extends Component {
     }
     return (
       <div
+        className="campus-page"
         style={{
-          color: "white",
-          backgroundColor: "black",
-          background: `url(${campus.image}) repeat`,
-          zIndex: "-1",
-          width: "100vw",
-          height: "100%"
+          background: `url(${campus.image}) repeat`
         }}
       >
         {campusesMounted && (
           <div>
-            <h1
-              style={{
-                margin: "0",
-                textAlign: "center",
-                fontSize: "3em",
-                paddingTop: "1em",
-                paddingBottom: "1em"
-              }}
-            >
-              {campus.name}
-            </h1>
-            {studentDivs}
+            <h1 className="campus-title">{campus.name}</h1>
+            <div className="campus-student">{studentDivs}</div>
             <CampusForm id={campus.id} />
           </div>
         )}

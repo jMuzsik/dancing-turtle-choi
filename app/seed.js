@@ -1,14 +1,13 @@
-var {db, Students, Campuses} = require('../db/models')
-
+var { db, Students, Campuses } = require("../db/models");
 
 //seems these images expired
 
 // const animalArr = [
 //   {
 //     id: 10,
-//     name: "cock",
+//     name: "rooster",
 //     image: "https:cdn.pixabay.com/photo/2017/01/12/16/58/cock-1975153_640.jpg",
-//     quote: "im the cock, the best one ever, aint no competition, fight like none other, tough as this here beak, shatter your soul with one pop!",
+//     quote: "the best one ever, aint no competition, fight like none other, tough as this here beak, shatter your soul with one pop!",
 //     createdAt: "2017-10-19T17:04:31.001Z",
 //     updatedAt: "2017-10-19T17:05:02.846Z",
 //     campusId: 1
@@ -155,7 +154,8 @@ const fullstackPeople = [
     id: 6,
     name: "Andre",
     image: "../photos/andre.JPG",
-    quote: "philip, arthur, and kenny are in love with the way that the walls touch the floor",
+    quote:
+      "philip, arthur, and kenny are in love with the way that the walls touch the floor",
     createdAt: "2017-10-19T14:25:35.482Z",
     updatedAt: "2017-10-20T00:42:25.671Z",
     campusId: 1
@@ -457,7 +457,7 @@ const fullstackPeople = [
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
   }
-]
+];
 
 const placesArr = [
   {
@@ -474,17 +474,17 @@ const placesArr = [
   //   createdAt: "2017-10-19T16:13:31.246Z",
   //   updatedAt: "2017-10-20T00:35:02.925Z"
   // }
-]
+];
 
-
-db.sync({force: true})
+db
+  .sync({ force: true })
   .then(() => {
     return Campuses.bulkCreate(placesArr);
   })
-  .then(function () {
+  .then(function() {
     return Students.bulkCreate(fullstackPeople);
   })
   .then(() => {
-    console.log('finished inserting data')
+    console.log("finished inserting data");
   })
-  .catch(console.error)
+  .catch(console.error);

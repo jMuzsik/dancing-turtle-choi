@@ -9,17 +9,13 @@ class NavBar extends Component {
   //basically buttons and styling to students,campuses,home
   render() {
     return (
-      <div
-        className="pure-menu pure-menu-horizontal container"
-        style={{ backgroundColor: "rgb(159,242,80" }}
-      >
+      <div className="pure-menu pure-menu-horizontal container">
         <ul className="pure-menu-list">
           <li className="pure-menu-item pure-menu-selected">
             <NavLink to={"/home"}>
               <button
                 type="button"
-                style={{ backgroundColor: "rgb(65, 238, 244)", width: "33vw" }}
-                className="pure-menu-link pure-button"
+                className="pure-menu-link pure-button home-button"
               >
                 Home
               </button>
@@ -28,9 +24,8 @@ class NavBar extends Component {
           <li className="pure-menu-item pure-menu-selected">
             <NavLink to={"/students"}>
               <button
-                style={{ backgroundColor: "rgb(244, 226, 65)", width: "33vw" }}
                 type="button"
-                className="pure-menu-link pure-button"
+                className="pure-menu-link pure-button students-button"
               >
                 Students
               </button>
@@ -39,9 +34,8 @@ class NavBar extends Component {
           <li className="pure-menu-item pure-menu-selected">
             <NavLink to={"/campuses"}>
               <button
-                style={{ backgroundColor: "rgb(157, 244, 65)", width: "33vw" }}
                 type="button"
-                className="pure-menu-link pure-button"
+                className="pure-menu-link pure-button campuses-button"
               >
                 Campuses
               </button>

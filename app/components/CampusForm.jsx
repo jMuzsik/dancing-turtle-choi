@@ -42,14 +42,12 @@ class CampusForm extends Component {
     return (
       <div>
         <form
-          className="pure-form pure-form-stacked"
-          style={{ backgroundColor: "black", width: "25vw" }}
+          className="campus-form pure-form pure-form-stacked"
           onSubmit={this.handleSubmit}
         >
           <label>
             Name:
             <input
-              style={{ color: "black" }}
               type="text"
               placeholder="Enter new name"
               name="name"
@@ -59,7 +57,6 @@ class CampusForm extends Component {
           <label>
             Change Image:
             <input
-              style={{ color: "black" }}
               type="text"
               name="image"
               placeholder="Enter image URL"

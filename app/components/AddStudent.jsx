@@ -13,9 +13,10 @@ class AddStudent extends Component {
   handleSubmit(event) {
     event.preventDefault();
     //cruelty of option values only being strings
-    const campusId = +event.target.option.value;
+    let campusId = event.target.option.value;
     //if no campus, no user can be created
     if (campusId.length === 0) return alert("Need a campus!!!");
+    campusId = +campusId;
     let name = event.target.name.value;
     //default name
     if (name.length === 0) name = "why no name???";

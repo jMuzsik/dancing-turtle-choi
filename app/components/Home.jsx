@@ -31,9 +31,8 @@ class Home extends Component {
   createImageAnimations(student) {
     return (
       <img
-        className="studentimages"
         key={student.id}
-        className="dance"
+        className="dance student-images"
         src={student.image}
       />
     );
@@ -43,16 +42,7 @@ class Home extends Component {
     //for extremely vital star wars css thing at home page
     const titleTexts = campuses.map(campus => {
       return (
-        <h1
-          key={campus.name}
-          style={{
-            fontSize: "1em",
-            position: "relative",
-            color: "rgb(253,209,48)",
-            left: "30vw",
-            transform: "skew(50deg)"
-          }}
-        >
+        <h1 className="crawl-text" key={campus.name}>
           {campus.name}
           <br />
         </h1>
@@ -61,17 +51,7 @@ class Home extends Component {
 
     const studentTexts = students.map(student => {
       return (
-        <div
-          key={student.name}
-          style={{
-            fontSize: ".6em",
-            position: "relative",
-            color: "rgb(253,209,48)",
-            left: "30vw",
-            transform: "skew(50deg)",
-            textAlign: "center"
-          }}
-        >
+        <div className="crawl-text" key={student.name}>
           {student.name}
           <br />
         </div>
@@ -81,7 +61,6 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.state.isVisible);
     const isMounted = this.props.students.length > 0;
     //images will get image elements, text will be text elements
     let students = this.props.students,
@@ -98,7 +77,7 @@ class Home extends Component {
       //grab all names
       text = this.createCrawlText(students, campuses);
       let i = 0;
-      //b/c i do not understand css all that well, I had to make individual containers that contained a max of four images
+      //b/c i do not understand css all that well, I had to make individual containers that contained a max of a certain amount of images
       while (imagesOne.length < 11) {
         imagesOne[i] = images.pop();
         imagesTwo[i] = images.pop();
@@ -108,24 +87,8 @@ class Home extends Component {
       }
     }
     return (
-      <div
-        className="home"
-        style={{
-          overflow: "hidden",
-          backgroundColor: "black",
-          width: "100vw",
-          height: "100vh",
-          zIndex: "-1",
-          background:
-            "url(https://michaelspanofoundation.org/wp-content/uploads/2014/10/empty-spaces.jpg)no-repeat",
-          backgroundSize: "cover"
-        }}
-      >
+      <div className="home">
         <audio
-          style={{
-            position: "relative",
-            top: "-200em"
-          }}
           src="https://s.cdpn.io/1202/Star_Wars_original_opening_crawl_1977.ogg"
           controls
           autoPlay
@@ -133,16 +96,7 @@ class Home extends Component {
         />
         {this.state.isVisible && (
           <div>
-            <h1
-              className="starwars"
-              style={{
-                fontSize: "4em",
-                position: "fixed",
-                color: "yellow",
-                left: "30vw",
-                transform: "skew(50deg)"
-              }}
-            >
+            <h1 className="starwars">
               <div>{text}</div>
             </h1>
             <div className="container">{imagesOne}</div>

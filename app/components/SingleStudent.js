@@ -29,27 +29,14 @@ class SingleStudent extends Component {
   createStudentDiv(student) {
     return (
       <div
+        className="single-student-div"
         style={{
-          color: "black",
-          background: `url(${student.image}) no-repeat`,
-          backgroundSize: "100vw 100vh",
-          zIndex: "-1",
-          width: "100vw",
-          height: "100vh"
+          backgroundImage: `url(${student.image})`
         }}
       >
-        <h1
-          style={{
-            fontSize: "3em",
-            marginTop: "0",
-            textAlign: "center",
-            marginBottom: "3em"
-          }}
-        >
-          {student.name}
-        </h1>
+        <h1 className="single-student-name">{student.name}</h1>
         <div>
-          <span style={{ position: "relative", top: "30vh" }}>
+          <span className="single-student-quote">
             {student.quote || "say something"}
           </span>
         </div>
@@ -79,7 +66,7 @@ class SingleStudent extends Component {
       campus = grabCampus(campuses, campusId);
     }
     return (
-      <div style={{ backgroundColor: "black" }}>
+      <div className="all-students">
         {isMounted && studentDiv}
         <button
           className="button-secondary pure-button"

@@ -1,9 +1,4 @@
-* {
-  font-family: Optima, ‘Lucida Grande’, ‘Lucida Sans Unicode’, Verdana,
-    Helvetica, Arial, sans-serif;
-  font-size: 1em;
-}
-
+/*Resetting/defaults*/
 html,
 body,
 div,
@@ -89,8 +84,9 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: Optima, ‘Lucida Grande’, ‘Lucida Sans Unicode’, Verdana;
   vertical-align: baseline;
+  font-size: 1em;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -129,7 +125,7 @@ table {
   border-spacing: 0;
 }
 
-/*copied from pure styling site*/
+/*copied from pure styling site, buttons*/
 
 .button-success,
 .button-error,
@@ -156,6 +152,24 @@ table {
   background: rgb(66, 184, 221); /* this is a light blue */
 }
 
+/*logic and other styling of opening scene/home page*/
+
+.home {
+  overflow: hidden;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: url(https://michaelspanofoundation.org/wp-content/uploads/2014/10/empty-spaces.jpg)
+    no-repeat;
+  background-size: cover;
+}
+
+.home audio {
+  position: relative;
+  top: -200em;
+}
+
 .container.home {
   position: relative;
   background: azure
@@ -165,19 +179,8 @@ table {
   height: 100%;
   display: flex;
 }
-.container > button {
-  width: 33%;
-}
 
-.container > img {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: .5em;
-}
+/*Animation and styling of images flying through space*/
 
 .dance {
   z-index: 1000;
@@ -186,7 +189,9 @@ table {
   animation-iteration-count: infinite;
   animation-delay: none;
   animation-timing-function: linear;
+  padding: 0.5em;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -195,33 +200,33 @@ table {
   }
   5% {
     transform: rotate(5400deg);
-    width: .1vw;
-    height: .1vw;
+    width: 0.1vw;
+    height: 0.1vw;
   }
   10% {
     transform: rotate(10800deg);
-    width:.3vw;
-    height: .3vh;
+    width: 0.3vw;
+    height: 0.3vh;
   }
   15% {
     transform: rotate(16200deg);
-    width: .4vw;
-    height: .4vw;
+    width: 0.4vw;
+    height: 0.4vw;
   }
   20% {
     transform: rotate(21600deg);
-    width:.6vw;
-    height: .6vh;
+    width: 0.6vw;
+    height: 0.6vh;
   }
   25% {
     transform: rotate(27000deg);
-    width: .75vw;
-    height: .75vw;
+    width: 0.75vw;
+    height: 0.75vw;
   }
   30% {
     transform: rotate(30400deg);
-    width:.9vw;
-    height: .9vh;
+    width: 0.9vw;
+    height: 0.9vh;
   }
   35% {
     transform: rotate(24000deg);
@@ -230,8 +235,8 @@ table {
   }
   40% {
     transform: rotate(18600deg);
-    width:1.3vw;
-    height:1.3vh;
+    width: 1.3vw;
+    height: 1.3vh;
   }
   45% {
     transform: rotate(13200deg);
@@ -240,7 +245,7 @@ table {
   }
   50% {
     transform: rotate(11400deg);
-    width:2vw;
+    width: 2vw;
     height: 2vh;
   }
   55% {
@@ -250,7 +255,7 @@ table {
   }
   60% {
     transform: rotate(7800deg);
-    width:3vw;
+    width: 3vw;
     height: 3vh;
   }
   65% {
@@ -260,7 +265,7 @@ table {
   }
   70% {
     transform: rotate(4200deg);
-    width:4vw;
+    width: 4vw;
     height: 4vh;
   }
   75% {
@@ -270,7 +275,7 @@ table {
   }
   80% {
     transform: rotate(1100deg);
-    width:6vw;
+    width: 6vw;
     height: 6vh;
   }
   85% {
@@ -280,7 +285,7 @@ table {
   }
   90% {
     transform: rotate(0deg);
-    width:8vw;
+    width: 8vw;
     height: 8vh;
   }
   95% {
@@ -288,27 +293,129 @@ table {
     height: 10vw;
   }
   100% {
-    width:12vw;
+    width: 12vw;
     height: 12vh;
-    float:left;
+    float: left;
     animation-timing-function: ease;
   }
 }
+
+/*Crawl text in opening scene*/
+
+/*quite literally copied the core logic a css learning website for star wars crawl but I had to make it my own as the persons code demanded the entire screens box but that does not fit my code*/
+
+.starwars {
+  position: fixed;
+  z-index: 10000;
+  transform-origin: 50% 100%;
+  animation: crawl 85s linear;
+  animation-iteration-count: infinite;
+  font-size: 4em;
+  position: fixed;
+  color: yellow;
+  left: 30vw;
+  transform: skew(50deg);
+}
+
+h1.crawl-text {
+  font-size: 1em;
+  position: relative;
+  color: rgb(253, 209, 48);
+  left: 30vw;
+  transform: skew(50deg);
+}
+
+div.crawl-text {
+  font-size: 0.6em;
+  position: relative;
+  color: rgb(253, 209, 48);
+  left: 30vw;
+  transform: skew(50deg);
+  text-align: center;
+}
+
+.crawl {
+  position: relative;
+  top: -100px;
+  transform-origin: 50% 100%;
+}
+
+@keyframes crawl {
+  0% {
+    /* The element starts below the screen */
+    top: 650px;
+    left: -800px;
+    /* Rotate the text 20 degrees but keep it close to the viewer */
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    top: -3000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
+/*Navbar buttons*/
+
+.pure-menu.pure-menu-horizontal.container {
+  background-color: rgb(159, 242, 80);
+}
+
+.home-button {
+  background-color: rgb(65, 238, 244);
+  width: 33vw;
+}
+
+.students-button {
+  background-color: rgb(244, 226, 65);
+  width: 33vw;
+}
+
+.campuses-button {
+  background-color: rgb(157, 244, 65);
+  width: 33vw;
+}
+
+/*Students page*/
 
 .container.students {
   display: inline-block;
   position: relative;
 }
 
-.individualstudent button {
+.individual-student {
+  color: white;
+  text-align: center;
   float: left;
+  padding: 1em;
+  width: 25vw;
+  margin-left: 1em;
+  display: inline-block;
+}
+
+.individual-student > img {
+  width: 100%;
+  height: 30vh;
+}
+
+.individual-student button {
   width: 75%;
 }
 
-.individualstudent input {
-  float: left;
+.individual-student input {
   width: 25%;
 }
+
+.students-page {
+  background: url(https://michaelspanofoundation.org/wp-content/uploads/2014/10/empty-spaces.jpg)
+    repeat;
+  z-index: "-1";
+}
+
+.students-page > a > button {
+  width: 100%;
+}
+
+/*Individual Student*/
 
 .studentpage > h1 {
   text-align: center;
@@ -320,6 +427,8 @@ table {
   top: 50vh;
 }
 
+/*Campuses Component*/
+
 .campus {
   display: inline-block;
   width: 100%;
@@ -328,11 +437,14 @@ table {
 .campus img {
   position: relative;
   left: 3em;
+  width: 80vw;
+  height: 30vh;
 }
 
 .campus h1 {
   font-size: 2em;
   text-align: center;
+  color: white;
 }
 .campus button {
   float: left;
@@ -343,37 +455,86 @@ table {
   float: left;
   width: 25%;
 }
-.starwars {
-  position:fixed;
-  z-index: 10000;
-  transform-origin: 50% 100%;
-  animation: crawl 88s linear;
-  animation-iteration-count: infinite;
+
+.campuses {
+  background: url(https://michaelspanofoundation.org/wp-content/uploads/2014/10/empty-spaces.jpg)
+    repeat;
+  background-size: cover;
+  z-index: -1;
+  height: 100vh;
+  background-color: black;
 }
 
-/*quite literally copied from a css learning website for star wars crawl but I had to make it my own as the persons code demanded the entire screens box but that would not fit my code*/
+.campuses .button-secondary {
+  width: 100%;
+}
 
-.crawl {
-  /* Position the element so we can adjust the top property in the animation */
+/*Individual Campus Component*/
+
+.campus-page {
+  color: white;
+  background-color: black;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+}
+
+.campus-title {
+  margin: 0;
+  text-align: center;
+  font-size: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.campus-student > div {
+  display: inline-block;
+  width: 30vw;
+  padding-bottom: 1em;
+  padding-left: 0.5em;
+  text-align: center;
+}
+
+.campus-student > div > a > button {
+  background-color: black;
+  color: rgb(244, 209, 66);
+}
+
+.campus-student > div > input {
+  background-color: black;
+  color: rgb(239, 23, 23);
+}
+
+/*Campus Form Component, w/in the individual campus component*/
+
+.campus-form {
+  width: 25vw;
+  color: black;
+}
+
+/*Single Student Component*/
+
+.single-student-div {
+  color: black;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+.single-student-name {
+  font-size: 3em;
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.single-student-quote {
   position: relative;
-  /* Making sure the text is fully off the screen at the start and end of the animation */
-  top: -100px;
-  /* Defines the skew origin at the very center when we apply transforms on the animation */
-  transform-origin: 50% 100%;
+  top: 30vh;
 }
 
-@keyframes crawl {
-  0% {
-    /* The element starts below the screen */
-    top: 650px;
-    left:-800px;
-    /* Rotate the text 20 degrees but keep it close to the viewer */
-    transform: rotateX(20deg) translateZ(0);
-  }
-  100% {
-    /* This is a magic number, but using a big one to make sure the text is fully off the screen at the end */
-    top: -3000px;
-    /* Slightly increasing the rotation at the end and moving the text far away from the viewer */
-    transform: rotateX(25deg) translateZ(-2500px);
-  }
+.all-students {
+  background-color: black;
 }

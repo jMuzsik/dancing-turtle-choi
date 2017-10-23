@@ -23,9 +23,10 @@ router.get("/:id", function(req, res, next) {
 router.post("/", function(req, res, next) {
   Students.create(req.body)
     .then(student => {
+      res.status(201);
       res.json(student);
     })
-    .catch(console.error);
+    .catch(next);
 });
 
 //modify student data
@@ -37,7 +38,7 @@ router.put("/:studentId", function(req, res, next) {
       res.status(200);
       res.json(student);
     })
-    .catch(console.error);
+    .catch(next);
 });
 
 // delete a student
@@ -46,5 +47,5 @@ router.delete("/:id", function(req, res, next) {
 
   Students.destroy({ where: { id: studentId } })
     .then(() => res.status(204).end())
-    .catch(console.error);
+    .catch(next);
 });

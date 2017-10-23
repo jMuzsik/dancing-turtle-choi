@@ -15,8 +15,8 @@ class Campuses extends Component {
       //yes, my css is all over the place, in css file and way too much inline styling
       return (
         <div className="campus" key={campus.id}>
-          <h1 style={{ color: "white" }}>{campus.name}</h1>
-          <img style={{ width: "80vw", height: "30vh" }} src={campus.image} />
+          <h1>{campus.name}</h1>
+          <img src={campus.image} />
           <NavLink key={campus.id} to={`/campuses/${campus.id}`}>
             <button key={campus.id} className="button-success pure-button">
               {campus.name}
@@ -48,21 +48,9 @@ class Campuses extends Component {
   render() {
     //background stars
     return (
-      <div
-        style={{
-          background:
-            "url(https://michaelspanofoundation.org/wp-content/uploads/2014/10/empty-spaces.jpg)repeat",
-          backgroundSize: "cover",
-          zIndex: "-1",
-          height: "100vh",
-          backgroundColor: "black"
-        }}
-      >
+      <div className="campuses">
         <NavLink key="addCampus" to={"/addCampus"}>
-          <button
-            style={{ width: "100%" }}
-            className="button-secondary pure-button"
-          >
+          <button className="button-secondary pure-button">
             Create New Campus
           </button>
         </NavLink>

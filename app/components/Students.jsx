@@ -14,20 +14,9 @@ class Students extends Component {
   createStudentDivs(students) {
     const studentsDivs = students.map(student => {
       return (
-        <div
-          style={{
-            color: "white",
-            textAlign: "center",
-            float: "left",
-            padding: "1em",
-            width: "25vw",
-            marginLeft: "1em"
-          }}
-          key={student.id}
-          className="individualstudent"
-        >
-          <div style={{ display: "inline-block" }}>{student.name}</div>
-          <img style={{ width: "100%", height: "30vh" }} src={student.image} />
+        <div className="individual-student" key={student.id}>
+          <div>{student.name}</div>
+          <img src={student.image} />
           <input
             onClick={this.handleSubmit}
             id={student.id}
@@ -47,14 +36,6 @@ class Students extends Component {
     return studentsDivs;
   }
 
-  // checkCampus(studentId) {
-  //   const studentCampusFilter = this.props.campuses.filter(
-  //     campus => campus.id === studentId
-  //   );
-  //   if (!studentCampusFilter.length) return;
-  //   return studentCampusFilter[0].name;
-  // }
-
   handleSubmit(event) {
     const id = event.target.id;
 
@@ -70,18 +51,9 @@ class Students extends Component {
     const students = this.props.students,
       studentDivs = this.createStudentDivs(students);
     return (
-      <div
-        style={{
-          background:
-            "url(https://michaelspanofoundation.org/wp-content/uploads/2014/10/empty-spaces.jpg)repeat",
-          zIndex: "-1"
-        }}
-      >
+      <div className="students-page">
         <NavLink key="addStudent" to={"/addstudent"}>
-          <button
-            style={{ width: "100%" }}
-            className="button-secondary pure-button"
-          >
+          <button className="button-secondary pure-button">
             Add a new student
           </button>
         </NavLink>
