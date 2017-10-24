@@ -515,7 +515,9 @@ div.crawl-text {
 /*Single Student Component*/
 
 .single-student-div {
-  color: black;
+  color: rgb(66, 69, 244);
+/*  text-shadow:.2em .2em #ff0000;*/
+  margin-left:2em;
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
   z-index: -1;
@@ -532,7 +534,7 @@ div.crawl-text {
 
 .single-student-quote {
   position: relative;
-  top: 30vh;
+  top: 42vh;
 }
 
 .all-students {

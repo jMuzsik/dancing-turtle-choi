@@ -17,6 +17,9 @@ module.exports = app
   .use(bodyParser.json())
   .use(express.static(resolve(__dirname, "..", "public"))) // Serve static files from ../public
   .use("/api", require("./api/index")) // Serve our api
+  .get("*/style.css", (_, res) =>
+    res.sendFile(resolve(__dirname, "..", "public", "style.css"))
+  )
   .get("/*", (_, res) =>
     res.sendFile(resolve(__dirname, "..", "public", "index.html"))
   ); // Send index.html for any other requests.

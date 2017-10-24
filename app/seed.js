@@ -109,7 +109,7 @@ const fullstackPeople = [
     id: 1,
     name: "Aaron",
     image: "../photos/aaron.JPG",
-    quote: "",
+    quote: "stop kicking me!!!",
     createdAt: "2017-10-19T17:04:31.001Z",
     updatedAt: "2017-10-19T17:05:02.846Z",
     campusId: 1
@@ -127,16 +127,16 @@ const fullstackPeople = [
     id: 3,
     name: "Alex",
     image: "../photos/alex.JPG",
-    quote: "",
+    quote: "i love flexbox",
     createdAt: "2017-10-19T17:00:14.876Z",
     updatedAt: "2017-10-20T00:14:49.456Z",
     campusId: 1
   },
   {
     id: 4,
-    name: "Alison",
+    name: "Allison",
     image: "../photos/alison.JPG",
-    quote: "",
+    quote: "don't even",
     createdAt: "2017-10-19T17:01:30.533Z",
     updatedAt: "2017-10-20T00:27:27.138Z",
     campusId: 1
@@ -145,7 +145,7 @@ const fullstackPeople = [
     id: 5,
     name: "Andrew",
     image: "../photos/andrew.JPG",
-    quote: "",
+    quote: "just chilling",
     createdAt: "2017-10-19T16:52:09.908Z",
     updatedAt: "2017-10-20T00:31:10.646Z",
     campusId: 1
@@ -154,8 +154,7 @@ const fullstackPeople = [
     id: 6,
     name: "Andre",
     image: "../photos/andre.JPG",
-    quote:
-      "philip, arthur, and kenny are in love with the way that the walls touch the floor",
+    quote:"vkusno",
     createdAt: "2017-10-19T14:25:35.482Z",
     updatedAt: "2017-10-20T00:42:25.671Z",
     campusId: 1
@@ -173,7 +172,7 @@ const fullstackPeople = [
     id: 8,
     name: "Bobby",
     image: "../photos/bobby.JPG",
-    quote: "",
+    quote: "I hate turning red squares into green squares.",
     createdAt: "2017-10-19T16:55:44.564Z",
     updatedAt: "2017-10-19T16:56:15.661Z",
     campusId: 1
@@ -182,7 +181,7 @@ const fullstackPeople = [
     id: 9,
     name: "Brian",
     image: "../photos/brian.JPG",
-    quote: "",
+    quote: "1v1 me in DDR",
     createdAt: "2017-10-19T16:56:56.861Z",
     updatedAt: "2017-10-19T16:57:18.814Z",
     campusId: 1
@@ -191,7 +190,7 @@ const fullstackPeople = [
     id: 10,
     name: "Bryan",
     image: "../photos/bryan.JPG",
-    quote: "",
+    quote: "I can't hear you over my pecs",
     createdAt: "2017-10-19T16:59:01.039Z",
     updatedAt: "2017-10-19T16:59:19.284Z",
     campusId: 1
@@ -200,7 +199,7 @@ const fullstackPeople = [
     id: 11,
     name: "Carmen",
     image: "../photos/carmen.JPG",
-    quote: "",
+    quote: "wait, don't tell me",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -218,16 +217,16 @@ const fullstackPeople = [
     id: 13,
     name: "Claire",
     image: "../photos/claire.JPG",
-    quote: "",
+    quote: "a stretched body is a stretched mind",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
   },
   {
     id: 14,
-    name: "Daniel",
+    name: "Dan",
     image: "../photos/daniel.JPG",
-    quote: "",
+    quote: "i forgot what day i got married",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -245,7 +244,7 @@ const fullstackPeople = [
     id: 16,
     name: "Doug",
     image: "../photos/doug.JPG",
-    quote: "crossword master, yoga guru",
+    quote: "yoga time!!",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -254,25 +253,25 @@ const fullstackPeople = [
     id: 17,
     name: "Eric",
     image: "../photos/eric.JPG",
-    quote: "Cards time",
+    quote: "Where did you learn to play Euchre?",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
   },
   {
     id: 18,
-    name: "Erin",
+    name: "Eren",
     image: "../photos/erin.JPG",
-    quote: "",
+    quote: "umm... i think that this is silly",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
   },
   {
     id: 19,
-    name: "Evette",
+    name: "Yvette",
     image: "../photos/evette.JPG",
-    quote: "whisper whisper",
+    quote: "get at me",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -281,7 +280,7 @@ const fullstackPeople = [
     id: 20,
     name: "James",
     image: "../photos/james.JPG",
-    quote: "",
+    quote: "where's the giant peach?",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -290,7 +289,7 @@ const fullstackPeople = [
     id: 21,
     name: "John",
     image: "../photos/john.JPG",
-    quote: "",
+    quote: "Ahhh!!! My leg!!!!",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -299,7 +298,7 @@ const fullstackPeople = [
     id: 22,
     name: "Kenny",
     image: "../photos/kenny.JPG",
-    quote: "",
+    quote: "I am my own doctor",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -317,7 +316,7 @@ const fullstackPeople = [
     id: 24,
     name: "Mariel",
     image: "../photos/mariel.JPG",
-    quote: "",
+    quote: "I miss my quartet",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -326,7 +325,7 @@ const fullstackPeople = [
     id: 25,
     name: "Mike",
     image: "../photos/mike.JPG",
-    quote: "",
+    quote: "I'll hug you if you need it",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -335,7 +334,7 @@ const fullstackPeople = [
     id: 26,
     name: "Mitch",
     image: "../photos/mitch.JPG",
-    quote: "",
+    quote: "I just don't think Kanye West is a God, he's just a dude",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -344,7 +343,7 @@ const fullstackPeople = [
     id: 27,
     name: "Mueed",
     image: "../photos/mueed.JPG",
-    quote: "",
+    quote: "I'm gonna go watch moneyball again",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -353,7 +352,7 @@ const fullstackPeople = [
     id: 28,
     name: "Nicholas",
     image: "../photos/nicholas.JPG",
-    quote: "",
+    quote: "I skip hotseat and I've never been caught",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -362,16 +361,16 @@ const fullstackPeople = [
     id: 29,
     name: "Nick",
     image: "../photos/nick.JPG",
-    quote: "",
+    quote: "Just so sick of traveling. All that fast food",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
   },
   {
     id: 30,
-    name: "Philip",
+    name: "Phillip",
     image: "../photos/philip.JPG",
-    quote: "",
+    quote: "Eating meat is the best thing you can do for yourself",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -380,7 +379,7 @@ const fullstackPeople = [
     id: 31,
     name: "Rian",
     image: "../photos/rian.JPG",
-    quote: "",
+    quote: "There's no y, it's an i",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -398,7 +397,7 @@ const fullstackPeople = [
     id: 33,
     name: "Sam",
     image: "../photos/sam.JPG",
-    quote: "",
+    quote: "I miss my kid",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -416,7 +415,7 @@ const fullstackPeople = [
     id: 35,
     name: "Simon",
     image: "../photos/simon.JPG",
-    quote: "",
+    quote: "looking forward to Violet Evergarden",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -425,7 +424,7 @@ const fullstackPeople = [
     id: 36,
     name: "Sol",
     image: "../photos/sol.JPG",
-    quote: "",
+    quote: "I wanna go on a hike, or if not, rewatch Planet Earth",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -434,7 +433,7 @@ const fullstackPeople = [
     id: 37,
     name: "Vincent",
     image: "../photos/vincent.JPG",
-    quote: "",
+    quote: "Physics doesn't matter, what matters is living",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -443,7 +442,7 @@ const fullstackPeople = [
     id: 38,
     name: "Xi Xi",
     image: "../photos/xixi.JPG",
-    quote: "",
+    quote: "MOAR SPICEY!!!!",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
@@ -452,7 +451,25 @@ const fullstackPeople = [
     id: 39,
     name: "Jerry",
     image: "../photos/jerry.JPG",
-    quote: "ehhhhh",
+    quote: "I just don't know, I can never know, its a mystery",
+    createdAt: "2017-10-19T17:03:25.945Z",
+    updatedAt: "2017-10-19T17:03:46.053Z",
+    campusId: 1
+  },
+  {
+    id: 40,
+    name: "Evans",
+    image: "../photos/evans.jpeg",
+    quote: "MEAHEEEAAAAAAAAA!!!!!!!!!!",
+    createdAt: "2017-10-19T17:03:25.945Z",
+    updatedAt: "2017-10-19T17:03:46.053Z",
+    campusId: 1
+  },
+  {
+    id: 41,
+    name: "Veekas",
+    image: "../photos/veekas.JPG",
+    quote: "Veekas means progress, development, unity, harmony, opulence, versatility, water use according to google translate, resplendent, sumptuous, elegant, and much more",
     createdAt: "2017-10-19T17:03:25.945Z",
     updatedAt: "2017-10-19T17:03:46.053Z",
     campusId: 1
