@@ -7,4 +7,6 @@ npm start
 
 Some sweet Star Wars action occurs
 
-Open the video file to see a walk through the simple app.
+Open the video link to see a walk through the simple app.
+
+https://www.youtube.com/watch?v=4SgJYXYmkMc&feature=youtu.be
