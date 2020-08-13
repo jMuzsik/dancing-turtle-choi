@@ -1,5 +1,7 @@
 # Senior Enrichment Project
 
+One of the first things I created, a mess of code with a creative touch.
+
 npm install
 npm run build-watch
 && 
